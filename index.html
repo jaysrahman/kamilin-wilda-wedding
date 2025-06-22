@@ -973,7 +973,11 @@
 
               list.innerHTML += `
           <div class="mb-3 p-2 border rounded bg-white">
-            <strong>${item.nama}</strong><br>
+            <strong>${item.nama}</strong>
+            <span class="badge ${item.hadir ? "bg-success" : "bg-danger"}">
+              ${item.hadir ? "Hadir" : "Tidak Hadir"}
+            </span>
+            <br>
             ${item.ucapan}<br>
             <small class="text-muted">${formatTimeAgo(item.created_at)}</small>
           </div>
